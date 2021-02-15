@@ -113,8 +113,8 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
           </ModalUpper>
           <AutoColumn gap="md" style={{ padding: '1rem', paddingTop: '0' }} justify="center">
             <TYPE.subHeader fontWeight={500}>
-              Enter an address to trigger a LAMBO claim. If the address has any claimable LAMBO it will be sent to them on
-              submission.
+              Enter an address to trigger a LAMBO claim. If the address has any claimable LAMBO it will be sent to them
+              on submission.
             </TYPE.subHeader>
             <AddressInputPanel value={typed} onChange={handleRecipientType} />
             {parsedAddress && !hasAvailableClaim && (

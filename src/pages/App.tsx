@@ -31,7 +31,7 @@ import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, Redirec
 
 import Vote from './Vote'
 import VotePage from './Vote/VotePage'
-import background from "./placeholder.jpg";
+import background from './placeholder.jpg'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -81,16 +81,18 @@ export default function App() {
       <Route component={GoogleAnalyticsReporter} />
       <Route component={DarkModeQueryParamReader} />
       <AppWrapper>
-        <div style={{
-          backgroundImage: `url(${background})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          width: '100%',
-          height: '100%',
-          backgroundSize: 'cover',
-          position: 'fixed',
-          top: '0',
-        }}>
+        <div
+          style={{
+            backgroundImage: `url(${background})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            width: '100%',
+            height: '100%',
+            backgroundSize: 'cover',
+            position: 'fixed',
+            top: '0'
+          }}
+        >
           <URLWarning />
           <HeaderWrapper>
             <Header />
