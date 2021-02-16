@@ -1,4 +1,4 @@
-import { ChainId} from '@uniswap/sdk'
+import { ChainId } from '@uniswap/sdk'
 import React, { useState } from 'react'
 import { Text } from 'rebass'
 import { NavLink } from 'react-router-dom'
@@ -11,7 +11,7 @@ import Logo from '../../assets/svg/logo.svg'
 import LogoDark from '../../assets/svg/logo_white.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
-import { useETHBalances} from '../../state/wallet/hooks'
+import { useETHBalances } from '../../state/wallet/hooks'
 import { CardNoise } from '../earn/styled'
 // import { CountUp } from 'use-count-up'
 import { TYPE, ExternalLink } from '../../theme'
@@ -294,7 +294,7 @@ export default function Header() {
             <img width={'90px'} src={isDark ? LogoDark : Logo} alt="logo" />
           </UniIcon>
         </Title>
-        <HeaderLinks> 
+        <HeaderLinks>
           <StyledNavLink id={`swap-nav-link`} to={'/swap'}>
             {t('swap')}
           </StyledNavLink>

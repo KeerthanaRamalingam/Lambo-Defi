@@ -13,7 +13,8 @@ const CopyIcon = styled(LinkStyledButton)`
   font-size: 0.825rem;
   :hover {
     color: ${({ theme }) => theme.text1};
-  },
+  }
+  ,
   :active,
   :focus {
     text-decoration: none;

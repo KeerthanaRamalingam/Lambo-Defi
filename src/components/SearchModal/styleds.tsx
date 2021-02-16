@@ -23,7 +23,7 @@ export const PaddedColumn = styled(AutoColumn)`
 `
 
 export const MenuItem = styled(RowBetween)`
-color: ${({ theme }) => theme.text1};
+  color: ${({ theme }) => theme.text1};
   padding: 4px 20px;
   height: 56px;
   display: grid;

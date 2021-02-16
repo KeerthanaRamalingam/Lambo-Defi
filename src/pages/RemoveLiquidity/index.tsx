@@ -128,7 +128,7 @@ export default function RemoveLiquidity({
       chainId: chainId,
       verifyingContract: pair.liquidityToken.address
     }
-    const Permit = "0x4ce3f1fbc7265c20ccd4e5e6aac572d56dc40c5d3950fa3e7a9c880bf63ae8c0";
+    const Permit = '0x4ce3f1fbc7265c20ccd4e5e6aac572d56dc40c5d3950fa3e7a9c880bf63ae8c0'
 
     const message = {
       owner: account,

@@ -177,9 +177,7 @@ export default function Pool() {
               </HideSmall>
               <ButtonRow>
                 <ResponsiveButtonSecondary as={Link} padding="6px 8px" to="/create/ETH">
-                  <Text color={theme.text3} >
-                    Create a pair
-                  </Text>
+                  <Text color={theme.text3}>Create a pair</Text>
                 </ResponsiveButtonSecondary>
                 <ResponsiveButtonPrimary id="join-pool-button" as={Link} padding="6px 8px" to="/add/ETH">
                   <Text fontWeight={500} fontSize={16}>
@@ -228,15 +226,15 @@ export default function Pool() {
                 )}
               </>
             ) : (
-                    <EmptyProposals>
-                      <TYPE.body color={theme.text3} textAlign="center">
-                        No liquidity found.
+              <EmptyProposals>
+                <TYPE.body color={theme.text3} textAlign="center">
+                  No liquidity found.
                 </TYPE.body>
-                    </EmptyProposals>
-                  )}
+              </EmptyProposals>
+            )}
 
             <AutoColumn justify={'center'} gap="md">
-              <Text textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0' }}> 
+              <Text textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0' }}>
                 {hasV1Liquidity ? 'Uniswap V1 liquidity found!' : "Don't see a pool you joined?"}{' '}
                 <StyledInternalLink id="import-pool-link" to={hasV1Liquidity ? '/migrate/v1' : '/find'}>
                   {hasV1Liquidity ? 'Migrate now.' : 'Import it.'}

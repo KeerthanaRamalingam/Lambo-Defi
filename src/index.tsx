@@ -20,11 +20,10 @@ import ThemeProvider, { FixedGlobalStyle, ThemedGlobalStyle } from './theme'
 import getLibrary from './utils/getLibrary'
 // import background from "./placeholder.jpg";
 
-
 const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName)
 
 if ('ethereum' in window) {
-  ; (window.ethereum as any).autoRefreshOnNetworkChange = false
+  ;(window.ethereum as any).autoRefreshOnNetworkChange = false
 }
 
 const GOOGLE_ANALYTICS_ID: string | undefined = process.env.REACT_APP_GOOGLE_ANALYTICS_ID
@@ -56,36 +55,34 @@ function Updaters() {
   )
 }
 
-
 ReactDOM.render(
-//   <div style={{
-//     backgroundImage: `url(${background})`,
-//     backgroundRepeat: 'no-repeat',
-//     backgroundPosition: 'center',
-//     width: '100%',
-//     height: '100%',
-//     backgroundSize: 'cover',
-//     position: 'fixed',
-// top: '0',
-//   }}>
+  //   <div style={{
+  //     backgroundImage: `url(${background})`,
+  //     backgroundRepeat: 'no-repeat',
+  //     backgroundPosition: 'center',
+  //     width: '100%',
+  //     height: '100%',
+  //     backgroundSize: 'cover',
+  //     position: 'fixed',
+  // top: '0',
+  //   }}>
   <StrictMode>
-    
-      <FixedGlobalStyle />
-      <Web3ReactProvider getLibrary={getLibrary}>
-        <Web3ProviderNetwork getLibrary={getLibrary}>
-          <Blocklist>
-            <Provider store={store}>
-              <Updaters />
-              <ThemeProvider>
-                <ThemedGlobalStyle />
-                <HashRouter>
-                  <App />
-                </HashRouter>
-              </ThemeProvider>
-            </Provider>
-          </Blocklist>
-        </Web3ProviderNetwork>
-      </Web3ReactProvider>
+    <FixedGlobalStyle />
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <Web3ProviderNetwork getLibrary={getLibrary}>
+        <Blocklist>
+          <Provider store={store}>
+            <Updaters />
+            <ThemeProvider>
+              <ThemedGlobalStyle />
+              <HashRouter>
+                <App />
+              </HashRouter>
+            </ThemeProvider>
+          </Provider>
+        </Blocklist>
+      </Web3ProviderNetwork>
+    </Web3ReactProvider>
   </StrictMode>,
   // </div>,
   document.getElementById('root')
