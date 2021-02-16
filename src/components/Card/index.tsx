@@ -11,14 +11,40 @@ const Card = styled(Box)<{ padding?: string; border?: string; borderRadius?: str
   border: ${({ border }) => border};
   border-radius: ${({ borderRadius }) => borderRadius};
 `
+
+const CardRemove = styled(Box)<{ padding?: string; border?: string; borderRadius?: string }>`
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  padding: 1.25rem;
+  padding: ${({ padding }) => padding};
+  border: ${({ border }) => border};
+  border-radius: ${({ borderRadius }) => borderRadius};
+  margin-top: -10px;
+`
+const Card1 = styled(Box)<{ padding?: string; border?: string; borderRadius?: string }>`
+  width: 100%;
+  height: 209px;
+  border-radius: 16px;
+  padding: 1.25rem;
+  padding: ${({ padding }) => padding};
+  border: ${({ border }) => border};
+  border-radius: ${({ borderRadius }) => borderRadius};
+  margin-top: -483px;
+  margin-left: 448px;
+`  
 export default Card
 
 export const LightCard = styled(Card)`
   border: 1px solid ${({ theme }) => theme.bg2};
   background-color: ${({ theme }) => theme.bg1};
 `
+export const RemoveCard = styled(CardRemove)`
+  border: 1px solid ${({ theme }) => theme.bg2};
+  background-color: ${({ theme }) => theme.bg1};
+`
 
-export const GreyCard = styled(Card)`
+export const GreyCard = styled(Card1)`
   background-color: ${({ theme }) => theme.bg3};
 `
 

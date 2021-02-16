@@ -143,6 +143,9 @@ export const TYPE = {
   body(props: TextProps) {
     return <TextWrapper fontWeight={400} fontSize={16} color={'bg2'} {...props} />
   },
+  bodyT(props: TextProps) {
+    return <TextWrapper fontWeight={400} fontSize={16} color={'bg1'} {...props} />
+  },
   largeHeader(props: TextProps) {
     return <TextWrapper fontWeight={600} fontSize={24} {...props} />
   },

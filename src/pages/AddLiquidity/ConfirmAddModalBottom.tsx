@@ -25,37 +25,37 @@ export function ConfirmAddModalBottom({
   return (
     <>
       <RowBetween>
-        <TYPE.body>{currencies[Field.CURRENCY_A]?.symbol} Deposited</TYPE.body>
+        <TYPE.bodyT>{currencies[Field.CURRENCY_A]?.symbol} Deposited</TYPE.bodyT>
         <RowFixed>
           <CurrencyLogo currency={currencies[Field.CURRENCY_A]} style={{ marginRight: '8px' }} />
-          <TYPE.body>{parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)}</TYPE.body>
+          <TYPE.bodyT>{parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)}</TYPE.bodyT>
         </RowFixed>
       </RowBetween>
       <RowBetween>
-        <TYPE.body>{currencies[Field.CURRENCY_B]?.symbol} Deposited</TYPE.body>
+        <TYPE.bodyT>{currencies[Field.CURRENCY_B]?.symbol} Deposited</TYPE.bodyT>
         <RowFixed>
           <CurrencyLogo currency={currencies[Field.CURRENCY_B]} style={{ marginRight: '8px' }} />
-          <TYPE.body>{parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)}</TYPE.body>
+          <TYPE.bodyT>{parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)}</TYPE.bodyT>
         </RowFixed>
       </RowBetween>
       <RowBetween>
-        <TYPE.body>Rates</TYPE.body>
-        <TYPE.body>
+        <TYPE.bodyT>Rates</TYPE.bodyT>
+        <TYPE.bodyT>
           {`1 ${currencies[Field.CURRENCY_A]?.symbol} = ${price?.toSignificant(4)} ${
             currencies[Field.CURRENCY_B]?.symbol
           }`}
-        </TYPE.body>
+        </TYPE.bodyT>
       </RowBetween>
       <RowBetween style={{ justifyContent: 'flex-end' }}>
-        <TYPE.body>
+        <TYPE.bodyT>
           {`1 ${currencies[Field.CURRENCY_B]?.symbol} = ${price?.invert().toSignificant(4)} ${
             currencies[Field.CURRENCY_A]?.symbol
           }`}
-        </TYPE.body>
+        </TYPE.bodyT>
       </RowBetween>
       <RowBetween>
-        <TYPE.body>Share of Pool:</TYPE.body>
-        <TYPE.body>{noLiquidity ? '100' : poolTokenPercentage?.toSignificant(4)}%</TYPE.body>
+        <TYPE.bodyT>Share of Pool:</TYPE.bodyT>
+        <TYPE.bodyT>{noLiquidity ? '100' : poolTokenPercentage?.toSignificant(4)}%</TYPE.bodyT>
       </RowBetween>
       <ButtonPrimary style={{ margin: '20px 0 0 0' }} onClick={onAdd}>
         <Text fontWeight={500} fontSize={20}>

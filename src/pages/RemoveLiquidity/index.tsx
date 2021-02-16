@@ -9,7 +9,7 @@ import { RouteComponentProps } from 'react-router'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'
 import { ButtonPrimary, ButtonLight, ButtonError, ButtonConfirmed } from '../../components/Button'
-import { LightCard } from '../../components/Card'
+import { RemoveCard } from '../../components/Card'
 import { AutoColumn, ColumnCenter } from '../../components/Column'
 import TransactionConfirmationModal, { ConfirmationModalContent } from '../../components/TransactionConfirmationModal'
 import CurrencyInputPanel from '../../components/CurrencyInputPanel'
@@ -363,7 +363,7 @@ export default function RemoveLiquidity({
           </RowFixed>
         </RowBetween>
 
-        <TYPE.italic fontSize={12} color={theme.text2} textAlign="left" padding={'12px 0 0 0'}>
+        <TYPE.italic fontSize={12} color={theme.text1} textAlign="left" padding={'12px 0 0 0'}>
           {`Output is estimated. If the price changes by more than ${allowedSlippage /
             100}% your transaction will revert.`}
         </TYPE.italic>
@@ -380,7 +380,7 @@ export default function RemoveLiquidity({
           </Text>
           <RowFixed>
             <DoubleCurrencyLogo currency0={currencyA} currency1={currencyB} margin={true} />
-            <Text fontWeight={500} fontSize={16}>
+            <Text fontWeight={500} fontSize={16} color={theme.text2}>
               {parsedAmounts[Field.LIQUIDITY]?.toSignificant(6)}
             </Text>
           </RowFixed>
@@ -391,13 +391,13 @@ export default function RemoveLiquidity({
               <Text color={theme.text2} fontWeight={500} fontSize={16}>
                 Price
               </Text>
-              <Text fontWeight={500} fontSize={16} color={theme.text1}>
+              <Text fontWeight={500} fontSize={16} color={theme.text2}>
                 1 {currencyA?.symbol} = {tokenA ? pair.priceOf(tokenA).toSignificant(6) : '-'} {currencyB?.symbol}
               </Text>
             </RowBetween>
             <RowBetween>
               <div />
-              <Text fontWeight={500} fontSize={16} color={theme.text1}>
+              <Text fontWeight={500} fontSize={16} color={theme.text2}>
                 1 {currencyB?.symbol} = {tokenB ? pair.priceOf(tokenB).toSignificant(6) : '-'} {currencyA?.symbol}
               </Text>
             </RowBetween>
@@ -487,7 +487,7 @@ export default function RemoveLiquidity({
             pendingText={pendingText}
           />
           <AutoColumn gap="md">
-            <LightCard>
+            <RemoveCard>
               <AutoColumn gap="20px">
                 <RowBetween>
                   <Text fontWeight={500}>Amount</Text>
@@ -501,7 +501,7 @@ export default function RemoveLiquidity({
                   </ClickableText>
                 </RowBetween>
                 <Row style={{ alignItems: 'flex-end' }}>
-                  <Text fontSize={72} fontWeight={500}>
+                  <Text fontSize={36} fontWeight={500}>
                     {formattedAmounts[Field.LIQUIDITY_PERCENT]}%
                   </Text>
                 </Row>
@@ -525,13 +525,13 @@ export default function RemoveLiquidity({
                   </>
                 )}
               </AutoColumn>
-            </LightCard>
+            </RemoveCard>
             {!showDetailed && (
               <>
                 <ColumnCenter>
                   <ArrowDown size="16" color={theme.text2} />
                 </ColumnCenter>
-                <LightCard>
+                <RemoveCard>
                   <AutoColumn gap="10px">
                     <RowBetween>
                       <Text fontSize={24} fontWeight={500}>
@@ -577,7 +577,7 @@ export default function RemoveLiquidity({
                       </RowBetween>
                     ) : null}
                   </AutoColumn>
-                </LightCard>
+                </RemoveCard>
               </>
             )}
 

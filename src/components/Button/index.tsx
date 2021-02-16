@@ -111,7 +111,8 @@ export const ButtonGray = styled(Base)`
 
 export const ButtonSecondary = styled(Base)`
   border: 1px solid ${({ theme }) => theme.primary4};
-  color: ${({ theme }) => theme.primary1};
+  background-color: ${({ theme, disabled }) => !disabled && darken(0.1, theme.bg1)};
+  color: ${({ theme }) => theme.primary4};
   font-size: 16px;
   border-radius: 12px;
   padding: ${({ padding }) => (padding ? padding : '10px')};
@@ -121,7 +122,7 @@ export const ButtonSecondary = styled(Base)`
     border: 1px solid ${({ theme }) => theme.primary3};
   }
   &:hover {
-    border: 1px solid ${({ theme }) => theme.primary3};
+    border: 1px solid ${({ theme }) => theme.primary4};
   }
   &:active {
     box-shadow: 0 0 0 1pt ${({ theme }) => theme.primary4};
@@ -199,7 +200,7 @@ export const ButtonOutlined = styled(Base)`
 
 export const ButtonEmpty = styled(Base)`
   background-color: transparent;
-  color: ${({ theme }) => theme.primary2};
+  color: ${({ theme }) => theme.primary4};
   display: flex;
   justify-content: center;
   align-items: center;
