@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+// import { theme } from 'theme'
 
 const Column = styled.div`
   display: flex;
@@ -11,13 +12,14 @@ export const ColumnCenter = styled(Column)`
 `
 
 export const AutoColumn = styled.div<{
-  gap?: 'sm' | 'md' | 'lg' | string
+  gap?: 'sm' | 'md' | 'lg' | 'test' | string
   justify?: 'stretch' | 'center' | 'start' | 'end' | 'flex-start' | 'flex-end' | 'space-between'
 }>`
   display: grid;
   grid-auto-rows: auto;
-  grid-row-gap: ${({ gap }) => (gap === 'sm' && '8px') || (gap === 'md' && '12px') || (gap === 'lg' && '24px') || gap};
+  grid-row-gap: ${({ gap }) => (gap === 'sm' && '8px') || (gap === 'md' && '12px') || (gap === 'test' && '12px') || (gap === 'lg' && '24px') || gap};
   justify-items: ${({ justify }) => justify && justify};
+  background-color: ${({ gap }) => (gap === 'test' && "#000000")};
 `
 
 export default Column

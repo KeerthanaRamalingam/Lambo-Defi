@@ -17,7 +17,7 @@ import { CardNoise } from '../earn/styled'
 import { TYPE, ExternalLink } from '../../theme'
 
 import { YellowCard } from '../Card'
-// import Settings from '../Settings'
+import Settings from '../Settings'
 import Menu from '../Menu'
 
 import Row, { RowFixed } from '../Row'
@@ -375,7 +375,7 @@ export default function Header() {
           </AccountElement>
         </HeaderElement>
         <HeaderElementWrap>
-          {/* <Settings /> */}
+          <Settings />
           <Menu />
         </HeaderElementWrap>
       </HeaderControls>
