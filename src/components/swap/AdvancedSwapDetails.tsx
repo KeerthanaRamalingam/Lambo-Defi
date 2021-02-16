@@ -19,7 +19,7 @@ const InfoLink = styled(ExternalLink)`
   border-radius: 8px;
   text-align: center;
   font-size: 14px;
-  color: ${({ theme }) => theme.text1};
+  color: ${({ theme }) => theme.black};
 `
 
 function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippage: number }) {
@@ -39,7 +39,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
             <QuestionHelper text="Your transaction will revert if there is a large, unfavorable price movement before it is confirmed." />
           </RowFixed>
           <RowFixed>
-            <TYPE.black color={theme.text1} fontSize={14}>
+            <TYPE.black color={theme.text2} fontSize={14}>
               {isExactIn
                 ? `${slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(4)} ${trade.outputAmount.currency.symbol}` ??
                   '-'
@@ -65,7 +65,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
             </TYPE.black>
             <QuestionHelper text="A portion of each trade (0.30%) goes to liquidity providers as a protocol incentive." />
           </RowFixed>
-          <TYPE.black fontSize={14} color={theme.text1}>
+          <TYPE.black fontSize={14} color={theme.black}>
             {realizedLPFee ? `${realizedLPFee.toSignificant(4)} ${trade.inputAmount.currency.symbol}` : '-'}
           </TYPE.black>
         </RowBetween>
@@ -105,7 +105,7 @@ export function AdvancedSwapDetails({ trade }: AdvancedSwapDetailsProps) {
             </>
           )}
           <AutoColumn style={{ padding: '0 24px' }}>
-            <InfoLink href={'https://uniswap.info/pair/' + trade.route.pairs[0].liquidityToken.address} target="_blank">
+            <InfoLink color={theme.text2} href={'https://uniswap.info/pair/' + trade.route.pairs[0].liquidityToken.address} target="_blank">
               View pair analytics ↗
             </InfoLink>
           </AutoColumn>

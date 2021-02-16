@@ -271,8 +271,8 @@ const ButtonErrorStyle = styled(Base)`
     opacity: 50%;
     cursor: auto;
     box-shadow: none;
-    background-color: ${({ theme }) => theme.red1};
-    border: 1px solid ${({ theme }) => theme.red1};
+    background-color: ${({ theme }) => theme.black};
+    border: 1px solid ${({ theme }) => theme.white};
   }
 `
 

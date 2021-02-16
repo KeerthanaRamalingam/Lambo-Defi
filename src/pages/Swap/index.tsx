@@ -361,10 +361,10 @@ export default function Swap() {
                   )}
                   {allowedSlippage !== INITIAL_ALLOWED_SLIPPAGE && (
                     <RowBetween align="center">
-                      <ClickableText fontWeight={500} fontSize={14} color={theme.text2} onClick={toggleSettings}>
+                      <ClickableText fontWeight={500} fontSize={14} color={theme.white} onClick={toggleSettings}>
                         Slippage Tolerance
                       </ClickableText>
-                      <ClickableText fontWeight={500} fontSize={14} color={theme.text2} onClick={toggleSettings}>
+                      <ClickableText fontWeight={500} fontSize={14} color={theme.white} onClick={toggleSettings}>
                         {allowedSlippage / 100}%
                       </ClickableText>
                     </RowBetween>
