@@ -11,11 +11,7 @@ import { useModalOpen, useToggleSettingsMenu } from '../../state/application/hoo
 //   useUserTransactionTTL,
 //   useUserSlippageTolerance
 // } from '../../state/user/hooks'
-import {
-  useExpertModeManager,
-  useUserTransactionTTL,
-  useUserSlippageTolerance
-} from '../../state/user/hooks'
+import { useExpertModeManager, useUserTransactionTTL, useUserSlippageTolerance } from '../../state/user/hooks'
 import { TYPE } from '../../theme'
 import { ButtonError } from '../Button'
 import { AutoColumn } from '../Column'
