@@ -137,6 +137,9 @@ export const TYPE = {
   black(props: TextProps) {
     return <TextWrapper fontWeight={500} color={'text1'} {...props} />
   },
+  blackSwap(props: TextProps) {
+    return <TextWrapper fontWeight={500} color={'black'} {...props} />
+  },
   white(props: TextProps) {
     return <TextWrapper fontWeight={500} color={'white'} {...props} />
   },
