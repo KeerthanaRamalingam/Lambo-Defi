@@ -109,7 +109,7 @@ export default function Slider({ value, onChange, min = 0, step = 1, max = 100, 
       size={size}
       type="range"
       value={value}
-      style={{ width: '90%', marginLeft: 15, marginRight: 15, padding: '8px 0', backgroundColor: "white" }}
+      style={{ width: '90%', marginLeft: 15, marginRight: 15, padding: '8px 0', backgroundColor: 'white' }}
       onChange={changeCallback}
       aria-labelledby="input slider"
       step={step}

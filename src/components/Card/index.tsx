@@ -32,7 +32,7 @@ const Card1 = styled(Box)<{ padding?: string; border?: string; borderRadius?: st
   border-radius: ${({ borderRadius }) => borderRadius};
   margin-top: -483px;
   margin-left: 448px;
-`  
+`
 export default Card
 
 export const LightCard = styled(Card)`

@@ -203,10 +203,8 @@ export default function Pool() {
               <>
                 <ButtonSecondary>
                   <RowBetween>
-                    <ExternalLink href={'' + account} >
-                    <TYPE.body color={theme.text1}>
-                      Account analytics and accrued fees
-                      </TYPE.body>
+                    <ExternalLink href={'' + account}>
+                      <TYPE.body color={theme.text1}>Account analytics and accrued fees</TYPE.body>
                     </ExternalLink>
                     <span> ↗</span>
                   </RowBetween>
