@@ -44,13 +44,13 @@ export default function SwapModalFooter({
     <>
       <AutoColumn gap="0px">
         <RowBetween align="center">
-          <Text fontWeight={400} fontSize={14} color={theme.white}>
+          <Text fontWeight={400} fontSize={14} color={theme.black}>
             Price
           </Text>
           <Text
             fontWeight={500}
             fontSize={14}
-            color={theme.white}
+            color={theme.black}
             style={{
               justifyContent: 'center',
               alignItems: 'center',
@@ -102,7 +102,7 @@ export default function SwapModalFooter({
             </TYPE.black>
             <QuestionHelper text="A portion of each trade (0.30%) goes to liquidity providers as a protocol incentive." />
           </RowFixed>
-          <TYPE.black fontSize={14}>
+          <TYPE.black fontSize={14} color={theme.black}>
             {realizedLPFee ? realizedLPFee?.toSignificant(6) + ' ' + trade.inputAmount.currency.symbol : '-'}
           </TYPE.black>
         </RowBetween>

@@ -65,7 +65,7 @@ export default function SwapModalHeader({
             fontWeight={500}
             color={
               priceImpactSeverity > 2
-                ? theme.red1
+                ? theme.white
                 : showAcceptChanges && trade.tradeType === TradeType.EXACT_INPUT
                 ? theme.primary1
                 : ''
